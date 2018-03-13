@@ -1,1 +1,37 @@
-1.
+1.O que são sistemas embarcados?
+Um sistema embarcado possui um único propósito e aplicação, diferentemente de um computador que possui diversos propósitos e 
+aplicações. Um sistema embarcado executa atividades previamente definidas para sua aplicação, podendo ser
+reconfigurável via Software. Usar um sistema embarcado gera, como ponto positivo, a redução de custo sobre um projeto e 
+redução do tamanho do hardware por exemplo.
+
+
+2.O que são sistemas microprocesssados?
+São sistemas que podem utilizar sensores, e possui seus dados processados via microprocessadores. 
+
+
+3.Apresente aplicações de sistemas embarcados: 
+(a) Para a indústria automotiva; 
+Sistemas acionadores de airbags
+
+(b) Para eletrodomésticos; 
+Geladeiras, video games
+
+(c) Para automação industrial.
+Robos automatizados, como por exemplo, na produção de carros
+
+
+4.Cite arquiteturas possíveis e as diferenças entre elas.
+ASIC: utilizado para execução de atividades mais específicas
+FPGAs: projetado para circuitos que exigem uma rapidez de processamento, podem ser reconfiguráveis, utilizado para atividades
+paralelas e DSPs.
+
+
+5.Por que usamos o Raspberry Pi na disciplina, ao invés de outro system-on-chip?
+Vantagens:
+-Grande suporte disponível
+-Facilidade de manuseio e de utilização da placa
+-Compatível com Linux
+
+
+
+
