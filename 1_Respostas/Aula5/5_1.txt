@@ -1,0 +1,60 @@
+1.Considerando a biblioteca-padrão da linguagem C, responda:
+
+(a) Quais são as funções (e seus protótipos) para abrir e fechar arquivos?
+	fopen(char *nome_arquivo, char *modo de operação);
+	"r" =  Open text file for reading.  The stream  is  positioned  at  the beginning of the file. 
+	"r+" = Open  for  reading and writing.  The stream is positioned at the beginning of the file.
+	"w" = Truncate file to zero length or create text  file  for  writing. The stream is positioned at the beginning of the file.
+	"w+" = Open  for  reading  and writing.The file is created if it does not exist, otherwise it is truncated. The stream is  positioned at the beginning of the file.
+	"a" = Open  for  appending (writing at end of file).The file is created if it does not exist.  The stream is positioned at the  end of the file.
+	"a+" = Open  for  reading  and appending (writing at end of file).
+
+	fclose(FILE *nome_ do_ponteiro)
+
+
+(b) Quais são as funções (e seus protótipos) para escrever em arquivos?
+	putc(char ch,FILE *arquivo_aberto);
+	fputs (char *string, FILE *arquivo_aberto);
+	fprintf (FILE *arquivo_aberto, char *string);
+
+
+(c) Quais são as funções (e seus protótipos) para ler arquivos?
+	getc (FILE *arquivo_aberto);
+	fscanf(FILE *arquivo_aberto, char *string);
+	fgets (char *string, int tamanho, FILE *arquivo_aberto);
+
+
+(d) Quais são as funções (e seus protótipos) para reposicionar um ponteiro para arquivo?
+	rewind(FILE *arquivo_aberto);
+	fseek (FILE *arquivo_aberto, int offset, int origem);
+
+
+(e) Quais bibliotecas devem ser incluídas no código para poder utilizar as funções acima?
+	stdio.h 
+
+2.O que é a norma POSIX?
+ Portable Operating System Interface (POSIX): elaborada para trabalhar com hardware e usada para garantir a compatibilidade entre os sistemas operacionais, com o intuito de ser mais simples e rápida.
+
+
+3.Considerando a norma POSIX, responda:
+
+(a) Quais são as funções (e seus protótipos) para abrir e fechar arquivos?
+	int close(int arquivo_aberto);
+	int open(char *nome_arquivo,int modo);
+	O_WRONLY = write only.
+  	O_RDWR = ready and write only.
+	O_RDONLY = ready only.
+	O_APPEND = append for each write (escreve ao final do arquivo).
+	O_CREAT = create file if it does not exist. 
+
+(b) Quais são as funções (e seus protótipos) para escrever em arquivos?
+	ssize_t write(int arq, const void *buf, size_t nbyte)
+
+(c) Quais são as funções (e seus protótipos) para ler arquivos?
+	ssize_t read(int arq, const void *buf, size_t nbyte)
+
+(d) Quais são as funções (e seus protótipos) para reposicionar um ponteiro para arquivo?
+	off_t lseek(int arq, off_t offset, int whence);
+
+(e) Quais bibliotecas devem ser incluídas no código para poder utilizar as funções acima?
+	fcntl.h, unistd.h e termios.h
